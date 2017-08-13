@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FindRegisteredButNotPaid", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FindPaidButNotRegistered", "FindPaidButNotRegistered\FindPaidButNotRegistered.csproj", "{EDDAEAAE-6116-40E9-9135-8449AD3149D6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DumpLists", "DumpLists\DumpLists.csproj", "{A9CFF734-920B-4831-A902-B60E23E7EC9F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{EDDAEAAE-6116-40E9-9135-8449AD3149D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EDDAEAAE-6116-40E9-9135-8449AD3149D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EDDAEAAE-6116-40E9-9135-8449AD3149D6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A9CFF734-920B-4831-A902-B60E23E7EC9F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A9CFF734-920B-4831-A902-B60E23E7EC9F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A9CFF734-920B-4831-A902-B60E23E7EC9F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A9CFF734-920B-4831-A902-B60E23E7EC9F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

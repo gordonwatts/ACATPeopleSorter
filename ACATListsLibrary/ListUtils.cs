@@ -55,6 +55,7 @@ namespace ACATListsLibrary
                 return Enumerable.Range(0, 10000)
                     .Select(i => p.Read())
                     .Where(i => i != null)
+                    .Where((s, i) => i > 0)
                     .Select(i => new IndicoRegistration() { Name = i[1], Email = i[3].AsUnifiedEmail()})
                     .ToArray();
             }
@@ -188,6 +189,7 @@ namespace ACATListsLibrary
                 var p = new CsvParser(reader);
                 return Enumerable.Range(0, 10000)
                     .Select(i => p.Read())
+                    .Where((s, i) => i > 0)
                     .Where(i => i != null)
                     .Select(i => new PaidPeople() { FirstName = i[0], LastName = i[1], Email = i[2].AsUnifiedEmail() })
                     .ToArray();
@@ -217,6 +219,7 @@ namespace ACATListsLibrary
                 return Enumerable.Range(0, 10000)
                     .Select(i => p.Read())
                     .Where(i => i != null)
+                    .Where((s, i) => i > 0)
                     .Select(i => new FreePeople() { Email = i[0].AsUnifiedEmail(), Name = i[1], Reason = i[2] })
                     .ToArray();
             }
