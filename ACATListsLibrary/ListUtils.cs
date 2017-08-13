@@ -208,5 +208,25 @@ namespace ACATListsLibrary
                 get { return $"{FirstName} {LastName}"; }
             }
         }
+
+        public static FreePeople[] LoadFree()
+        {
+            using (var reader = File.OpenText("free.csv"))
+            {
+                var p = new CsvParser(reader);
+                return Enumerable.Range(0, 10000)
+                    .Select(i => p.Read())
+                    .Where(i => i != null)
+                    .Select(i => new FreePeople() { Email = i[0].AsUnifiedEmail(), Name = i[1], Reason = i[2] })
+                    .ToArray();
+            }
+        }
+
+        public class FreePeople
+        {
+            public string Name;
+            public string Email;
+            public string Reason;
+        }
     }
 }

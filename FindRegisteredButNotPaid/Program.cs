@@ -16,8 +16,13 @@ namespace FindRegisteredButNotPaid
             const bool ask_to_update_with_associations = true;
 
             // Find who is missing first.
-            var registered = LoadIndicoRegistered();
+            var registeredAll = LoadIndicoRegistered();
             var paid = LoadPaid();
+            var free = LoadFree();
+
+            var registered = from r in registeredAll
+                             where !free.Any(f => f.Email == r.Email)
+                             select r;
 
             var missing = from r in registered
                           where !paid.Any(p => r.Email == p.Email)
@@ -34,7 +39,7 @@ namespace FindRegisteredButNotPaid
             WriteLine("Guesses as to who each of the missing registered folks might be by matching full name");
             var possibleMatches = from m in missing
                                   from p in paid
-                                  where m.Name == p.Name
+                                  where m.Name.ToLower() == p.Name.ToLower()
                                   group p by m;
 
             bool updated = false;
@@ -75,7 +80,7 @@ namespace FindRegisteredButNotPaid
             WriteLine("Guesses as to who each of the missing registered folks might be by matching last name");
             var lastnameMatches = from m in missing
                                   from p in paid
-                                  where m.Name.LastName() == p.Name.LastName()
+                                  where m.Name.LastName().ToLower() == p.Name.LastName().ToLower()
                                   group p by m;
             foreach (var missingGuesses in lastnameMatches)
             {
