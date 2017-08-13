@@ -175,5 +175,38 @@ namespace ACATListsLibrary
                 }
             }
         }
+
+
+        /// <summary>
+        /// Paid folks Store a list in scv called "paid.csv"
+        /// </summary>
+        /// <returns></returns>
+        public static PaidPeople[] LoadPaid()
+        {
+            using (var reader = File.OpenText("paid.csv"))
+            {
+                var p = new CsvParser(reader);
+                return Enumerable.Range(0, 10000)
+                    .Select(i => p.Read())
+                    .Where(i => i != null)
+                    .Select(i => new PaidPeople() { FirstName = i[0], LastName = i[1], Email = i[2].AsUnifiedEmail() })
+                    .ToArray();
+            }
+        }
+
+        /// <summary>
+        /// Someone who has paid!
+        /// </summary>
+        public class PaidPeople
+        {
+            public string FirstName;
+            public string LastName;
+            public string Email;
+
+            public string Name
+            {
+                get { return $"{FirstName} {LastName}"; }
+            }
+        }
     }
 }

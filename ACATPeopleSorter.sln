@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ACATListsLibrary", "ACATLis
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExcessiveSpeakers", "ExcessiveSpeakers\ExcessiveSpeakers.csproj", "{1E49653E-701C-41F9-AE77-4B147703E438}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FindRegisteredButNotPaid", "FindRegisteredButNotPaid\FindRegisteredButNotPaid.csproj", "{6AB79A3B-6A8A-46C2-8690-D5270EB02A11}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{1E49653E-701C-41F9-AE77-4B147703E438}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1E49653E-701C-41F9-AE77-4B147703E438}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1E49653E-701C-41F9-AE77-4B147703E438}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6AB79A3B-6A8A-46C2-8690-D5270EB02A11}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6AB79A3B-6A8A-46C2-8690-D5270EB02A11}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6AB79A3B-6A8A-46C2-8690-D5270EB02A11}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6AB79A3B-6A8A-46C2-8690-D5270EB02A11}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
