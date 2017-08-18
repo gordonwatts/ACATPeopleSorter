@@ -211,6 +211,32 @@ namespace ACATListsLibrary
             }
         }
 
+        /// <summary>
+        /// Load up new banquet payment info
+        /// </summary>
+        /// <returns></returns>
+        public static Banquet[] LoadBanquets()
+        {
+            using (var reader = File.OpenText("banquet.csv"))
+            {
+                var p = new CsvParser(reader);
+                return Enumerable.Range(0, 10000)
+                    .Select(i => p.Read())
+                    .Where((s, i) => i > 0)
+                    .Where(i => i != null)
+                    .Select(i => new Banquet() { FirstName = i[0], LastName = i[1], Email = i[2].AsUnifiedEmail(), NumberOrdered = 1 })
+                    .ToArray();
+            }
+        }
+
+        public class Banquet
+        {
+            public string FirstName;
+            public string LastName;
+            public string Email;
+            public int NumberOrdered;
+        }
+
         public static FreePeople[] LoadFree()
         {
             using (var reader = File.OpenText("free.csv"))

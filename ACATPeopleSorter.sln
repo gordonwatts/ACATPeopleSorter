@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26430.14
+VisualStudioVersion = 15.0.26430.16
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FindMissingPresenters", "FindMissingPresenters\FindMissingPresenters.csproj", "{EA8EB731-F295-4A1A-AC34-1DBBD25FA669}"
 EndProject
@@ -14,6 +14,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FindPaidButNotRegistered", "FindPaidButNotRegistered\FindPaidButNotRegistered.csproj", "{EDDAEAAE-6116-40E9-9135-8449AD3149D6}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DumpLists", "DumpLists\DumpLists.csproj", "{A9CFF734-920B-4831-A902-B60E23E7EC9F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DumpMMReceipts", "DumpMMReceipts\DumpMMReceipts.csproj", "{40F1C5B1-66F3-423F-8C14-A4605CA04DA3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{A9CFF734-920B-4831-A902-B60E23E7EC9F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A9CFF734-920B-4831-A902-B60E23E7EC9F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A9CFF734-920B-4831-A902-B60E23E7EC9F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{40F1C5B1-66F3-423F-8C14-A4605CA04DA3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{40F1C5B1-66F3-423F-8C14-A4605CA04DA3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{40F1C5B1-66F3-423F-8C14-A4605CA04DA3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{40F1C5B1-66F3-423F-8C14-A4605CA04DA3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
