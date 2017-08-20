@@ -35,6 +35,7 @@ namespace DumpMMRegistration
 
             var rlines = allInfo
                 .Where(a => !a.Comment.Contains("BOGUS"))
+                .Where(a => !a.Comment.Contains("Staff"))
                 .Select(p => $"{p.Name},{p.Banquet},{p.Receipt},{p.Comment}");
 
             WriteCSVFile("mm_registered.csv", "Name, Banquet, Receipt, Comment", rlines);
